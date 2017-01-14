@@ -1,0 +1,42 @@
+[
+	{
+		"name": "nav1",
+		"data": [
+			{"content": "评论赢积分","icon": ""}
+		]
+	},{
+		"name": "nav2",
+		"data": [
+			{"content": "最新商品","fontColor": ""},
+			{"content": "一周爆款"},
+			{"content": "热卖商品"},
+			{"content": "最佳口碑"}
+		]
+	},{
+		"name": "nav3",
+		"data": [
+			{"content": "上衣"},
+			{"content": "衬衫&罩衫"},
+			{"content": "外套"},
+			{"content": "半身裙"},
+			{"content": "连衣裙"},
+			{"content": "裤装","icon": ""},
+			{"content": "鞋&包"},
+			{"content": "配饰"},
+			{"content": "内衣","icon": ""},
+			{"content": "SUMMER"},
+			{"content": "美妆","icon": ""}
+		]
+	},{
+		"name": "nav4",
+		"data": [
+			{"content": "明星赞助"},
+			{"content": "专题&活动"}
+		]
+	},{
+		"name": "nav5",
+		"data": [
+			{}
+		]
+	}
+]
