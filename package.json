@@ -1,7 +1,7 @@
 {
   "name": "shishangqiyi",
   "version": "1.0.0",
-  "description": "git sass and preject constructer other",
+  "description": "git gulp gulp-sass browserSync And learning",
   "main": "gulpfile.js",
   "directories": {
     "doc": "doc"
@@ -14,15 +14,20 @@
     "url": "git+https://github.com/ZgeZh/shishangqiyi.git"
   },
   "keywords": [
-    "shishangqiyi",
-    "git",
-    "gulp",
-    "html5"
+    "learning"
   ],
   "author": "ZgeZh",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ZgeZh/shishangqiyi/issues"
   },
-  "homepage": "https://github.com/ZgeZh/shishangqiyi#readme"
+  "homepage": "https://github.com/ZgeZh/shishangqiyi#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.6",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
+  },
+  "dependencies": {
+    "gulp-rename": "^1.2.2"
+  }
 }
