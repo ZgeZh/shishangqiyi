@@ -2,12 +2,12 @@
 	{
 		"name": "nav1",
 		"data": [
-			{"content": "评论赢积分","icon": ""}
+			{"content": "评论赢积分","icon": "css/img/new.gif"}
 		]
 	},{
 		"name": "nav2",
 		"data": [
-			{"content": "最新商品","fontColor": ""},
+			{"content": "最新商品","fontColor": "#ff283c"},
 			{"content": "一周爆款"},
 			{"content": "热卖商品"},
 			{"content": "最佳口碑"}
@@ -20,23 +20,18 @@
 			{"content": "外套"},
 			{"content": "半身裙"},
 			{"content": "连衣裙"},
-			{"content": "裤装","icon": ""},
+			{"content": "裤装","icon": "css/imgtop20off.png"},
 			{"content": "鞋&包"},
 			{"content": "配饰"},
-			{"content": "内衣","icon": ""},
+			{"content": "内衣","icon": "css/img/new.png"},
 			{"content": "SUMMER"},
-			{"content": "美妆","icon": ""}
+			{"content": "美妆","icon": "css/img/"}
 		]
 	},{
 		"name": "nav4",
 		"data": [
 			{"content": "明星赞助"},
 			{"content": "专题&活动"}
-		]
-	},{
-		"name": "nav5",
-		"data": [
-			{}
 		]
 	}
 ]
