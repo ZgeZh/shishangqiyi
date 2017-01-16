@@ -7,13 +7,14 @@ var reload = browserSync.reload;
 
 gulp.task('serve',['sass'],function(){
 	browserSync.init({
-		server: "src"
+		// server: "./",//创建browserSync 自带服务器地址  ./ 代表根目录
+		proxy: 'http://localhost'//服务器代理
 	});
 
-	gulp.watch("src/sass/*.scss",['sass']);//监听sass文件 并执行sass任务
-	gulp.watch("src/*.html").on('change',reload);//监听html文件(index.html)
-	gulp.watch("src/css/*.css").on('change',reload);//监听css文件
-	gulp.watch("src/js/*.js").on('change',reload);//监听js文件
+	gulp.watch("./src/sass/*.scss",['sass']);//监听sass文件 并执行sass任务
+	gulp.watch("./src/*.html").on('change',reload);//监听html文件(index.html)
+	gulp.watch("./src/css/*.css").on('change',reload);//监听css文件
+	gulp.watch("./src/js/*.js").on('change',reload);//监听js文件
 });
 
 gulp.task('sass',function(){
