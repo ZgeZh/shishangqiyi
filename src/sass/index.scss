@@ -71,23 +71,26 @@
 }
 #wrap-banner{
 	width: 100%;
+	//左边导航栏
 	.leftNav{
 		width: 150px;
 		margin-right:10px;
 		border-right: 1px solid #ccc;
 		border-bottom: 1px solid #ccc;
 		ul{
-			// padding-left: 30px;
 			margin-bottom: 40px;
 			li{
 				padding-left: 30px;
 				width: 120px;
-				margin-bottom:20px;
+				padding-bottom: 3px;
 				a{
 					display: inline-block;
 					color: #787878;
 					font-size: 14px;
 					cursor: pointer;
+					&:hover{
+						color: #abcaff;
+					}
 					img{
 						display: inline-block;
 						margin-left:5px;
@@ -98,25 +101,28 @@
 				border-bottom:1px solid #ccc;
 				margin-bottom: 20px;
 				li{
-					margin-top:10px;
-				}
+					padding-top: 10px;
+					padding-bottom: 10px;
+				}				
 			}
 			&.nav2{
 				li:nth-child(1){
 					a{
-						
+						color:red;
 					}
 				}
 			}
 			&.nav3{
 				border-bottom:1px solid #ccc;
-				margin-bottom:15px;
+				padding-bottom: 18px;
+				margin-bottom: 0px;
 			}
 			&.nav4{
 				margin-bottom: 20px;
 				li{
 					border-bottom:1px solid #ccc;
-					padding-bottom: 16px;
+					padding-top: 10px;
+					padding-bottom: 10px;
 				}
 			}
 		}
@@ -124,5 +130,17 @@
 			cursor: pointer;
 		}
 	}
+	//中间商品广告
+	.mainImg{
+		padding-top:2px;
+		ul{
+			float: left;
+			li{
+				margin-right: 2px;
+				margin-bottom: 1px;
+			}
+		}
+	}
+	
 
 }

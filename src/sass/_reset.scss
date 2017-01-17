@@ -9,8 +9,13 @@ th, td // table elements 表格元素
 	    padding: 0;
 	    font-size: 100%;
 	}
-body { font-family:Arial,'Times New Roman','Microsoft YaHei',SimHei; 
-font:bold 12px/0.75em Arial,'Times New Roman','Microsoft YaHei',SimHei; }
+// body { font-family:Arial,'Times New Roman','Microsoft YaHei',SimHei; 
+// font:bold 12px/0.75em Arial,'Times New Roman','Microsoft YaHei',SimHei; }
+// body{ font-family:Arial,Microsoft YaHei,verdana};
+// body{font-family: 'Microsoft Yahei', sans-serif;}
+// body{font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;}//例1（小米米官网）
+// body{font: 12px/1.5 Tahoma,Helvetica,Arial,'宋体',sans-serif;}//淘宝技术研发中心
+body{font: 14px/1.5 'Microsoft YaHei',arial,tahoma,\5b8b\4f53,sans-serif;}
 body{behavior:url(csshover.htc);} 
 a { text-decoration:none;}  
 ul,li { list-style:none;}
