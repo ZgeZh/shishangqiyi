@@ -14,6 +14,7 @@ gulp.task('serve',['sass'],function(){
 	gulp.watch("./src/sass/*.scss",['sass']);//监听sass文件 并执行sass任务
 	gulp.watch("./src/*.html").on('change',reload);//监听html文件(index.html)
 	gulp.watch("./src/css/*.css").on('change',reload);//监听css文件
+	gulp.watch("./src/html/*.html").on('change',reload);//监听html文件夹内的html文件
 	gulp.watch("./src/js/*.js").on('change',reload);//监听js文件
 });
 

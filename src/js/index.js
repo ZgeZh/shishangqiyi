@@ -85,7 +85,9 @@ $(function(){
 		var res = JSON.parse(response);
 		res.forEach(function(item,idx,arr){
 			if (idx <= 11) {
-				var $aLi = $("<li/>").appendTo($(".goodsInfo1"));
+				var $aLi = $("<li/>").appendTo($(".goodsInfo1")).on("click",function(){
+					window.location.href = "html/goodsDetails.html?indexId="+item.indexId;
+				})
 				var $aA = $("<a/>").appendTo($aLi);
 				var $aImg = $("<img/>").attr("src",item.image).appendTo($aA);
 
@@ -99,7 +101,9 @@ $(function(){
 				var $aP = $("<p/>").html(item.price).appendTo($aLi);
 			}
 			if (idx > 11) {
-				var $aLi = $("<li/>").appendTo($(".goodsInfo2"));
+				var $aLi = $("<li/>").appendTo($(".goodsInfo2")).on("click",function(){
+					window.location.href = "html/goodsDetails.html?indexId="+item.indexId;
+				})
 				var $aA = $("<a/>").appendTo($aLi);
 				var $aImg = $("<img/>").attr("src",item.image).appendTo($aA);
 
@@ -144,5 +148,8 @@ $(function(){
 		}		
 	});
 
+	//购物车
+	$(".cart").on("click",function(){
 
+	})
 })
