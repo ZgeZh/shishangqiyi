@@ -115,11 +115,6 @@ $(function(){
 		})
 	})
 
-	//注册登录
-	$(".register").on("click",function(){
-		$("#mask").css({display: "block"});
-		$(".Mregister").css({display: "block"});
-	})
 	
 	
 })
