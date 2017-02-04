@@ -1,1 +1,62 @@
-register.html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="../assets/bootstrap/css/bootstrap.css"><!-- 表单样式 -->
+	<link rel="stylesheet" type="text/css" href="../assets/jquery-confirm/jquery-confirm.css"><!-- 提示框样式 -->
+    <link rel="stylesheet" type="text/css" href="../css/register.css">
+
+    <!-- js -->
+    <script src="../assets/jquery/jquery-3.1.1.js"></script>
+    <script src="../assets/jquery-confirm/jquery-confirm.js"></script>
+    <script src="../assets/jquery/jquery.form.js"></script>
+    <script src="../js/register.js"></script>
+
+</head>
+<body>
+	<h1>会员注册</h1>
+    <div class="bs-example">
+        <form class="form-horizontal" role="form">
+
+            <div class="form-group">
+                <label for="username" class="col-sm-2 control-label">用户名</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="user" name="username" placeholder="Username">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="password" class="col-sm-2 control-label">密码</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="pass" name="password" placeholder="Password">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="confirmPassword" class="col-sm-2 control-label">确认密码</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="confirmPass" name="confirmPassword" placeholder="Confirm Password">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="phone" class="col-sm-2 control-label">电话</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone Number">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="button" id="submit" class="btn btn-default">注册</button><a href="login.html" class="goLogin">登录</a>
+                </div>
+            </div>
+            
+        </form>
+    </div>
+</body>
+
+</html>

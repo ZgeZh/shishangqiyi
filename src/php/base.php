@@ -29,7 +29,7 @@
 			}
 
 			// 将经过处理后的数组转换成字符串,等同于JSON.stringify()
-			$jsonData = json_encode($jsonData,JSON_UNESCAPED_UNICODE);
+			// $jsonData = json_encode($jsonData,JSON_UNESCAPED_UNICODE);
 
 			mysqli_free_result($result);//释放结果集
 		}

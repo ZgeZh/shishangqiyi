@@ -115,6 +115,34 @@ $(function(){
 		})
 	})
 
+	//登录注册
+	$(".register").on("click",function(){
+		window.location.href = "html/register.html";
+	});
+
+	$(".login").on("click",function(){
+			window.location.href = "html/login.html";
+	});
 	
-	
+	$.post("php/index.php",function(respones){
+		var res = JSON.parse(respones);
+		if (res.state == "true") {
+			$('.login').html(res.username).unbind();
+			$(".register").html("退出").unbind().on("click",function(){
+				$.post("php/logout.php",function(respones){
+					var res = JSON.parse(respones);
+					if (res.state) {
+						window.location.href = "index.html";
+					}
+				})
+			});
+
+			$(".userInfo").html("我的账户").unbind();
+			console.log("已登录");        
+		} else {
+			console.log("未登录");
+		}		
+	});
+
+
 })
