@@ -1,0 +1,43 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="keywords" content="图片循环滚动,循环滚动插件" />
+    <meta name="description" content="兼容PC和移动端的无限循环滚动插件;样式内置;效果流畅;鼠标悬停;支持鼠标滑轮控制;支持左右箭头控制;调用相当方便！" />
+    <meta name="author" content="Li Yuxi" />
+    <meta name="remark" content="Wang Yunhong -- The love of my life." />
+    <title>图片循环滚动</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="demo">
+        <a class="control prev"></a><a class="control next abs"></a><!--自定义按钮，移动端可不写-->
+        <div class="slider"><!--主体结构，请用此类名调用插件，此类名可自定义-->
+            <ul>
+                <li><a href=""><img src="1.jpg" alt="两弯似蹙非蹙笼烟眉，一双似喜非喜含情目。" /></a></li>
+                <li><a href=""><img src="2.jpg" alt="态生两靥之愁，娇袭一身之病。" /></a></li>
+                <li><a href=""><img src="3.jpg" alt="泪光点点，娇喘微微。" /></a></li>
+                <li><a href=""><img src="4.jpg" alt="闲静似娇花照水，行动如弱柳扶风。" /></a></li>
+                <li><a href=""><img src="5.jpg" alt="心较比干多一窍，病如西子胜三分。" /></a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="jquery-3.1.1.min.js"></script>
+    <script src="min.js"></script>
+    <script>
+    $(".slider").YuxiSlider({
+        width:800, //容器宽度
+        height:450, //容器高度
+        control:$('.control'), //绑定控制按钮
+        during:4000, //间隔4秒自动滑动
+        speed:800, //移动速度0.8秒
+        mousewheel:true, //是否开启鼠标滚轮控制
+        direkey:true //是否开启左右箭头方向控制
+    });
+    </script>
+</body>
+
+</html>
