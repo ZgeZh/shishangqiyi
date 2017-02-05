@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>购物车</title>
+	<!--css+plugin-->
+	<link rel="stylesheet" type="text/css" href="../css/shoppingCart.css">
+
+	<!--js+plugin-->
+	<script src="../assets/jquery/jquery-3.1.1.js"></script>
+	<script src="../js/shoppingCart.js"></script>
+</head>
+<body>
+	<div class="headNav cf">
+		<a href="#" class="logo fl"><img src="../img/logoTop.png"></a>
+		<ul class="tNav fl cf"></ul>
+	</div>	
+
+	<div id="wrap-header">
+		<a href="#" class="logo fl"></a>
+		<ul class="topNav cf">
+			<li class="ladies">
+				<a href="#"></a>
+			</li>
+			<li class="men">
+				<a href="#"></a>
+			</li>
+			<li class="cosmetic">
+				<a href="#"></a>
+			</li>
+		</ul>
+		<ul class="user_menu fr">
+			<li>
+				<a href="#" class="login">登录</a>
+				/
+				<a href="#" class="register">注册</a>
+			</li>
+			<li>
+				<a href="#" class="cart">购物车(<span class="cartCount">0</span>)</a>
+			</li>
+			<li>
+				<a href="#" class="stage">暂存架(<span class="stagecount">0</span>)</a>
+			</li>
+		</ul>
+	</div>
+
+	<div id="wrap-banner" class="cf">
+		<div class="leftNav fl">
+			<ul class="nav1"></ul>
+			<ul class="nav2"></ul>
+			<ul class="nav3"></ul>
+			<ul class="nav4"></ul>		
+			<div class="leftAd"><img src="../img/banner_img/ad.jpg"></div>
+		</div>
+		
+		<div class="cart fl">
+			<h1 class="title">我的购物车</h1>
+
+			<div class="cartTitle cf">
+		        <div class="detail">商品信息</div>
+		        <div class="price">商品单价</div>
+		        <div class="num">数量</div>
+		        <div class="sum">小计</div>
+		        <div class="state">说明</div>
+	    	</div>
+
+	    	<div class="cartTip">
+	    		<strong style="color:#f00">Tip:各种活动火爆进行中！！！</strong>
+	    	</div>
+
+	    	<div class="cartList">
+	    		<div class="cartItem">
+					<div class="goodsDetail">
+						<input type="checkBox">
+						<img src="../css/img/imgDemo.jpg" alt="">
+						<div class="detailBox">
+							<div class="icon">123!</div>
+							<p class="english">123!</p>
+							<span class="color">123!</span>
+							<span class="size">123!</span>
+							<div class="yourChoose">
+								<a href="javascript:;" class="edit"></a>
+								<a href="javascript:;" class="fav"></a>
+								<a href="javascript:;" class="del"></a>
+							</div>
+							
+						</div>
+					</div>
+
+					<div class="goodsPrice"></div>
+					<div class="goodsNum"></div>
+					<div class="goodsState"></div>
+	    		</div>
+	    	</div>
+
+		</div>
+
+		<div class="rightBar fr">
+			<a href="javascript:;" class="menuBtn">&gt;</a>
+
+			<ul class="quickMenu cf">
+				<li id="quickReg" class="fl"><a href="javascript:;"></a></li>
+				<li id="quickSearch" class="fl"><a href="javascript:;"></a></li>
+			</ul>
+			
+			<ul class="userMenu">
+				<li class="userInfo"><a href="html/login.html">登录&nbsp;/</a><a href="html/register.html">&nbsp;注册</a></li>
+				<li><a href="javascript:;">购物车(<span id="carCount">0</span>)</a></li>
+				<li><a href="javascript:;">暂存架(<span id="carCount">0</span>)</a></li>
+			</ul>
+
+			<ul class="appMenu">
+				<li>
+					<a href="javascript:;">APP扫码下载</a>
+					<div class="appPop">
+						<div class="appCode">
+							<img src="../img/app_code.jpg">
+						</div>
+						<div class="appTxt">
+							<p>扫码下载时尚起义</p>
+						</div>
+					</div>
+				</li>
+			</ul>
+
+			<ul class="helpMenu">
+				<li><a href="javascript:;">今日浏览</a></li>
+				<li>
+					<a href="javascript:;">关注微信</a>
+					<div class="wechat">
+						<img src="../img/wechat_code.jpg">
+						<p>关注时尚起义官方微信</p>
+						<p>潮流&amp;折扣早知道</p>
+					</div>
+				</li>
+				<li><a href="javascript:;">常见问题</a></li>
+				<li><a href="javascript:;">在线留言</a></li>
+			</ul>
+
+			<strong class="promise">100%正品保证<br/>100%韩国直邮<br/>100%售后服务</strong>
+
+			<div class="contact">
+				<a href="javascript:;"><span style="display: inline-block;border-right: 3px solid black;height:11px;margin-right: 5px;"></span>在线留言<img class="img1" src="../img/recommend_icon.png"></a>
+				<a href="javascript:;"><span style="display: inline-block;border-right: 3px solid black;height:11px;margin-right: 5px;"></span>客服电话<img class="img2" src="../img/busy_icon.png"></a>
+			</div>
+
+			<a href="javascript:;" class="topBtn"><span>TOP</span></a>
+		</div>
+	</div>
+
+	<div id="wrap-footLink">
+    	<div class="footLink cf">    	
+			<div class="contact fl">
+       	 		<div class="cf">
+                	<div class="tel fl"></div>
+                	<a class="QA fl" href="http://kr.shishangqiyi.com/my/myQAMSGList.asp" target="_blank"><strong>在线留言</strong><br>解答您的咨询，高效、便捷</a>            
+         		</div>
+            	<div class="work_time">8:00AM~17:00PM / 午休 12:00PM~13:00PM<br>周六日、法定节假日休息</div>
+            	<div class="address">退货地址：上海市闵行区万源路2158号 泓毅大厦413室<br>邮编：201103</div>
+            	<div class="copyright">
+                	<p class="info_cn">上海智桓市场营销策划有限公司 / 网站经营许可证号 沪ICP备06036963号</p>
+           		</div>
+        	</div>
+
+			<div class="list cf fl">
+				<div class="top cf">
+	                <div class="help_detail">
+	                    <h3>新手上路</h3>
+	                    <ul>
+	                        <li><a href="javascript:;"> &gt; 怎样下订单</a></li>
+	                        <li><a href="javascript:;"> &gt; 会员等级制度</a></li>
+	                        <li><a href="javascript:;"> &gt; 积分&amp;优惠券</a></li>
+	                    </ul>
+	                </div>
+	                <div class="help_detail">
+	                    <h3>关于订购</h3>
+	                    <ul>
+	                        <li><a href="javascript:;"> &gt; 支付方式</a></li>
+	                        <li><a href="javascript:;"> &gt; 配送时间</a></li>
+	                        <li><a href="javascript:;"> &gt; 配送费用</a></li>
+	                    </ul>
+	                </div>
+	                <div class="help_detail">
+	                    <h3>帮助中心</h3>
+	                    <ul>
+	                        <li><a href="javascript:;"> &gt; 找回密码</a></li>
+	                        <li><a href="javascript:;"> &gt; 常见问题</a></li>
+	                        <li><a href="javascript:;"> &gt; 公告栏</a></li>
+	                    </ul>
+	                </div>
+	                <div class="help_detail">
+	                    <h3>售后服务</h3>
+	                    <ul>
+	                        <li><a href="javascript:;"> &gt; 退货政策</a></li>
+	                        <li><a href="javascript:;"> &gt; 退货申请</a></li>
+	                        <li><a href="javascript:;"> &gt; 留言&amp;回复</a></li>
+	                    </ul>
+	                </div>
+	                <div class="help_detail help_detail_last">
+	                    <h3>关于我们</h3>
+	                    <ul>
+	                        <li><a href="javascript:;"> &gt; 平台介绍</a></li>
+	                        <li><a href="javascript:;"> &gt; 联系我们</a></li>
+	                        <li><a href="javascript:;"> &gt; 加入我们</a></li>
+	                    </ul>
+	                </div>
+				</div>
+
+				<div class="bottom cf">
+	                <div class="bottom_email cf">
+	                	<a class="email_sex" href="javascript:;">我要女装</a> <a class="email_sex"href="javascript:;">我要男装</a><input id="bottom_email" type="text" placeholder="订阅我们的邮件"><a id="bottom_email_btn" class="bottom_email_btn" href="javascript:;">订阅</a>
+	                </div>
+	                <ul class="goods_num">
+	        
+	                    <li> · 新商品数量<em>0</em>件</li>
+	                    <li> · 热卖商品数量<em>5,659</em>件</li>
+	                </ul>
+            	</div>
+            </div>
+    	</div>
+    </div>
+
+	<div id="wrap-foot">
+    	<div class="foot">
+    		<img src="../img/index_foot/alipay.jpg">
+    		<a href="javascript:;"><img src="../img/index_foot/cert.png"></a>
+    		<a href="javascript:;"><img src="../img/index_foot/cnnic.png"></a>
+    		<a href="javascript:;"><img src="../img/index_foot/12377.jpg"></a>
+    		<a href="javascript:;"><img src="../img/index_foot/12377_app.jpg"></a>
+    		<img src="../img/index_foot/direct.jpg">
+    		<img src="../img/index_foot/charge.jpg">
+    		<img src="../img/index_foot/quality.jpg">
+    	</div>
+    </div>
+</body>
+</html>

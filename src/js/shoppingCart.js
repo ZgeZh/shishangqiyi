@@ -64,38 +64,6 @@ $(function(){
 			}
 		})
 	});
-	
-	//商品详情
-	var indexId = window.location.href.split("=")[1];
-	if (indexId && indexId.length != 0) {
-		var index = "indexId="+indexId;
-		$.post("../php/goodsDetails.php",index,function(response){
-			var res = JSON.parse(response)[0];
-			console.log(res);
-			$(".goodsContain .leftImg").attr({"src": "../"+res.image});
-			$(".goodsContain .information .english").html(res.english);
-			$(".goodsContain .information .korean").html(res.korean);
-			$(".goodsContain .information .chinese").html(res.chinese);
-			var url = "url(../"+res.icon+") no-repeat 0 0";
-			$(".goodsContain .information .icon").css({"background": url});
-			$(".goodsContain .aboutPrice .price").html(res.price);
-		})
-	};
-
-	//商品数量加减
-	$(".reduce").on("click",function(){
-		var re = parseInt($(".inputNum").val());
-		if(re == 1){
-			return ;
-		} else {
-			$(".inputNum").val(re-1);		
-		}
-	});
-
-	$(".plus").on("click",function(){
-		var re = parseInt($(".inputNum").val());
-		$(".inputNum").val(re+1);
-	});
 
 	//登录注册
 	$(".register").on("click",function(){
@@ -126,6 +94,7 @@ $(function(){
 		}		
 	});
 
+	//添加商品到购物车
 	
 
 })
