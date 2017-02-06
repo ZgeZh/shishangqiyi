@@ -33,9 +33,9 @@ $(function(){
 
 	//主页左边导航栏
 	$.post("../php/leftNav.php",function(response){
-		var res = JSON.parse(response);
+		var resNav = JSON.parse(response);
 		// console.log(res);
-		res.forEach(function(item, idx, arr){
+		resNav.forEach(function(item, idx, arr){
 			var $aLi = $('<li/>');
 			var $oA = $('<a/>').html(item.title).appendTo($aLi);
 
@@ -70,17 +70,19 @@ $(function(){
 	if (indexId && indexId.length != 0) {
 		var index = "indexId="+indexId;
 		$.post("../php/goodsDetails.php",index,function(response){
-			var res = JSON.parse(response)[0];
-			console.log(res);
-			$(".goodsContain .leftImg").attr({"src": "../"+res.image});
-			$(".goodsContain .information .english").html(res.english);
-			$(".goodsContain .information .korean").html(res.korean);
-			$(".goodsContain .information .chinese").html(res.chinese);
-			var url = "url(../"+res.icon+") no-repeat 0 0";
+			var resDetail = JSON.parse(response)[0];
+			console.log(resDetail);
+			$(".goodsContain .leftImg").attr({"src": "../"+resDetail.image});
+			$(".goodsContain .information .english").html(resDetail.english);
+			$(".goodsContain .information .korean").html(resDetail.korean);
+			$(".goodsContain .information .chinese").html(resDetail.chinese);
+			zgeUrl = "../"+resDetail.icon;
+			var url = "url(../"+resDetail.icon+") no-repeat 0 0";
 			$(".goodsContain .information .icon").css({"background": url});
-			$(".goodsContain .aboutPrice .price").html(res.price);
-		})
+			$(".goodsContain .aboutPrice .price").html(resDetail.price);
+		});
 	};
+		
 
 	//商品数量加减
 	$(".reduce").on("click",function(){
@@ -103,9 +105,9 @@ $(function(){
 	});
 
 	$(".login").on("click",function(){
-			window.location.href = "login.html";
+		window.location.href = "login.html";
 	});
-	
+
 	$.post("../php/index.php",function(respones){
 		var res = JSON.parse(respones);
 		if (res.state == "true") {
@@ -118,11 +120,51 @@ $(function(){
 					}
 				})
 			});
+			console.log(res.username);
 
+			//根据用户名添加数据到数据库
+			//添加商品到购物车
+			$(".cart").on("click",function(){
+				var goodsId = indexId;
+				var img = $(".goodsContain .leftImg").attr("src");
+				var icon = zgeUrl;
+				var english = $(".goodsContain .english").html();
+				var color = $(".goodsContain .aboutColor .chooseColor").val();
+				var size = $(".goodsContain .aboutColor .chooseSize").val();
+				var num = $(".goodsContain .aboutColor .inputNum").val();
+				var price = $(".goodsContain .aboutPrice .price").html();
+				// console.log(res.username);
+				$.post("../php/cart.php",{
+					"user": res.username,
+					"goodsId": goodsId,
+					"img": img,
+					"icon": icon,
+					"english": english,
+					"color": color,
+					"size": size,
+					"price": price,
+					"amount": num
+				},function(response){
+					console.log(response);
+					var src = JSON.parse(response);
+					if (src.state == "true") {
+						// console.log(src.message+"自动前往购物车！");
+						 $.alert({content: src.message+" , 自动前往购物车！",onClose: function(){
+		                    window.location.href = "shoppingCart.html";
+		                }});	
+					} else {
+						$.alert(src.message);
+					}
+				})
+			});
+			
 			$(".userInfo").html("我的账户").unbind();
 			console.log("已登录");        
 		} else {
 			console.log("未登录");
+			$(".cart").on("click",function(){
+				alert("未登录，无法添加到购物车！");
+			})
 		}		
 	});
 

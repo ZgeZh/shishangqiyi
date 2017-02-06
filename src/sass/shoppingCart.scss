@@ -207,13 +207,17 @@
 			font-size:14px;
 			font-weight: bold;
 			border-bottom: 2px solid #2b2b2b;
-			margin-bottom: 10px;
+			strong{
+				color:#f00
+			}
 		}
 		.cartList{
 			.cartItem{
 				border-bottom:#e6e6e6 dashed 1px;
 				font-size: 14px;
 				overflow: hidden;
+				float: left;
+				margin-top: 15px;
 				.goodsDetail{
 					height: 135px;
 					float: left;
@@ -237,31 +241,106 @@
 					    font-size: 13px;
 					    .icon{
 					    	height: 22px;
-					    	width: 174px;
+					    	width: 90px;
 					    }
 					    .english{
+					    	height: 22px;
 					    	color: #000;
 					    }
 					    .color, .size{
-					    	color: #999
+					    	color: #999;
 					    }
 					    .yourChoose{
 					    	margin-top: 20px;
-					    }
-					    .edit, .fav, .del{
-				    	    display: inline-block;
-						    width: 28px;
-						    height: 28px;
-						    border: #e2e2e2 1px solid;
-						    overflow: hidden;
-						    line-height: 28px;
-						    float: left;
-						    margin-right: 5px;
-						    background: url(../images/cart/handle_sprite.png);
-						    //未完成
+						    .edit, .fav, .del{
+					    	    display: inline-block;
+							    width: 28px;
+							    height: 28px;
+							    border: #e2e2e2 1px solid;
+							    overflow: hidden;
+							    line-height: 28px;
+							    float: left;
+							    margin-right: 5px;
+						    }
+						    .edit{
+						    	background: url(../img/handle_sprite.png) no-repeat 0 0;
+						    }
+						    .fav{
+						    	background: url(../img/handle_sprite.png) no-repeat 0 -28px;
+						    }
+						    .del{
+						    	background: url(../img/handle_sprite.png) no-repeat 0 -56px;
+						    }
 					    }
 					}
-
+				}
+				.goodsPrice{
+					float: left;
+					font-size: 14px;
+				    width: 230px;
+				    height: 135px;
+				    line-height: 135px;
+				    text-align: center;
+				    color: #999;
+				}
+				.goodsNum{
+				    float: left;
+   					width: 170px;
+   					font-size: 14px;
+				    height: 135px;
+    				text-align: center;
+    				color: #999;
+    				overflow: hidden;
+    				.numBox{
+    					display: inline-block;
+    					margin-top: 52.5px;
+	    				.reduce, .plus{
+	    					float: left;
+						    display: inline-block;
+						    width: 20px;
+						    height: 30px;
+						    overflow: hidden;
+						    line-height: 30px;
+					        font-size: 12px;
+						    color: #2b2b2b;
+						    text-decoration: none;
+						    margin-right: 10px;
+						    margin-left: 10px;
+	    				}
+	    				.inputNum{
+	    					float: left;
+						    width: 28px;
+						    text-align: center;
+						    border: #e2e2e2 1px solid;
+						    height: 28px;
+						    line-height: 28px;
+						    color: #999;
+						}
+	    				.reduce{
+	    					background: url(../img/qty_sprite.png) no-repeat 0 0;
+	    				}
+	    				.plus{
+				    		background: url(../img/qty_sprite.png) no-repeat 0 -30px;
+				    	}
+			    	}
+				}
+				.goodsSum{
+				    height: 135px;
+				    line-height: 135px;
+    				text-align: center;
+				    float: left;
+    				width: 160px;
+    				color: #2b2b2b;
+    				font-weight: bold;
+				}
+				.goodsState{
+					height: 135px;
+				    line-height: 135px;
+    				text-align: center;
+				    float: left;
+    				width: 135px;
+    				color: orange;
+    				font-weight: bold;
 				}
 			}
 		}

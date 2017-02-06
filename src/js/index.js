@@ -150,6 +150,7 @@ $(function(){
 
 	//购物车
 	$(".cart").on("click",function(){
+		window.location.href = "html/shoppingCart.html";
+	});
 
-	})
 })

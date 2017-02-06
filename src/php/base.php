@@ -38,13 +38,14 @@
 		return $jsonData;
 	};
 
-	//执行逻辑语句
+	//执行修改数据的方法
 	function excute($sql){
 		$con = connect();
 		$result = mysqli_query($con,$sql);//返回布尔值 true||false 
 		mysqli_close($con);
 		return $result;
 	};
+
 
 	//insert into, update, delete 返回一个布尔值 true||false 不用释放
 ?>
