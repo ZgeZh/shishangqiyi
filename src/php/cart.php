@@ -8,7 +8,7 @@
 		$sql = format("insert into cart(user, goodsid, img, icon, english, color, size, price, amount) values('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}')", $_POST["user"], $_POST["goodsId"], $_POST["img"], $_POST["icon"], $_POST["english"], $_POST["color"], $_POST["size"], $_POST["price"], $_POST["amount"]);
 		$excute = excute($sql);
 		if ($excute) {
-			echo '{"state": "true", "message": "插入数据成功"}';
+			echo '{"state": "true", "message": "成功添加到购物车"}';
 		}else{
 			echo '{"state": "false", "message": "意外错误发生，请重新添加！"}';
 		}

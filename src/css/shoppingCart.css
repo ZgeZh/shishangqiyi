@@ -154,6 +154,28 @@ em { font-style: normal; }
 
 #wrap-banner .cart .cartList .cartItem .goodsState { height: 135px; line-height: 135px; text-align: center; float: left; width: 135px; color: orange; font-weight: bold; }
 
+#wrap-banner .cart .cartResult { width: 100%; background: #f4f4f4; border-bottom: #e6e6e6 dashed 1px; overflow: hidden; }
+
+#wrap-banner .cart .cartResult .cartOperation { line-height: 30px; float: left; width: 400px; margin-top: 12px; }
+
+#wrap-banner .cart .cartResult .cartOperation label input { margin: 8px 20px 0 20px; }
+
+#wrap-banner .cart .cartResult .cartOperation label a { font-size: 14px; margin-right: 20px; font-weight: bold; color: #6f6f6f; }
+
+#wrap-banner .cart .cartResult .cartMain { margin: 20px 0 30px 0; width: 350px; }
+
+#wrap-banner .cart .cartResult .cartMain .goodsAmount .goodstitle { width: 220px; float: left; height: 36px; line-height: 36px; font-weight: bold; font-size: 14px; color: #6f6f6f; }
+
+#wrap-banner .cart .cartResult .cartMain .goodsAmount .goodsdetail { width: 110px; float: left; height: 36px; line-height: 36px; font-size: 13px; }
+
+#wrap-banner .cart .Settlement { margin: 20px 0 100px 0; }
+
+#wrap-banner .cart .Settlement .step_next, #wrap-banner .cart .Settlement .step_prev { float: right; display: block; border: #e2e2e2 1px solid; width: 198px; height: 48px; text-align: center; line-height: 48px; color: #FFF; font-size: 16px; }
+
+#wrap-banner .cart .Settlement .step_next { background: #3e3e3e; margin-left: 10px; }
+
+#wrap-banner .cart .Settlement .step_prev { background: #aeaeae; }
+
 #wrap-banner .rightBar { position: fixed; right: 0; top: 142px; background: #f4f4f4; width: 101px; z-index: 1000; }
 
 #wrap-banner .rightBar .menuBtn { width: 20px; height: 54px; line-height: 54px; font-size: 18px; background: #d5d5d5; color: black; text-align: center; position: absolute; right: 101px; top: 0px; }

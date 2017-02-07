@@ -149,7 +149,7 @@ $(function(){
 					var src = JSON.parse(response);
 					if (src.state == "true") {
 						// console.log(src.message+"自动前往购物车！");
-						 $.alert({content: src.message+" , 自动前往购物车！",onClose: function(){
+						$.alert({content: src.message+" , 自动前往购物车！",onClose: function(){
 		                    window.location.href = "shoppingCart.html";
 		                }});	
 					} else {

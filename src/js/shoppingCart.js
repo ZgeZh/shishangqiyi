@@ -104,7 +104,7 @@ $(function(){
 						console.log(item);
 						var $cartItem = $("<div/>").addClass("cartItem").appendTo($(".cartList"));
 							var $goodsDetail = $("<div/>").addClass("goodsDetail").appendTo($cartItem);
-								var $check = $("<input/>").addClass("check").appendTo($goodsDetail).attr({"type": "checkBox"})
+								var $check = $("<input/>").addClass("check").appendTo($goodsDetail).attr({"type": "checkBox","checked": "checked"})
 								var $img = $("<img/>").appendTo($goodsDetail).attr({"src": item.img});
 								var $detailBox = $("<div/>").addClass("detailBox").appendTo($goodsDetail);
 									var $icon = $("<div/>").addClass("icon").appendTo($detailBox).css({"background-image": "url("+item.icon+")"});
@@ -201,6 +201,9 @@ $(function(){
 		}		
 	});
 
+	//checkBox按钮 结算功能
 	
+
+	//点击结算按钮 跳转到结算页面   
 	
 })
