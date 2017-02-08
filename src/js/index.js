@@ -128,6 +128,7 @@ $(function(){
 			window.location.href = "html/login.html";
 	});
 	
+	//登录状态
 	$.post("php/index.php",function(respones){
 		var res = JSON.parse(respones);
 		if (res.state == "true") {

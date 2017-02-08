@@ -55,3 +55,40 @@ gulp.task('monitorSass',function(){
 
 
 
+
+
+//创建任务 gulp.task() 
+//匹配文件 gulp.src()
+//监听文件 gulp.watch()
+//输出文件 gulp.dest()
+
+
+/*合并js文件  gulp-concat*/
+
+var concat = require("gulp-concat");
+
+//压缩插件
+var uglify = require("gulp-uglify");
+
+//重命名
+var rename = require("gulp-rename");
+
+gulp.task("merge",function(){
+	gulp.src('./src/js/*.js')
+		.pipe(concat('all.js'))
+
+		.pipe(uglify({
+			// compress: false,//类型：Boolean 默认：true 是否完全压缩
+  			// preserveComments: 'all' //保留所有注释
+		}))
+
+		.pipe(rename({
+			suffix: "-min"
+		}))
+
+		.pipe(gulp.dest('./dist/js'));
+})
+
+
+
+
